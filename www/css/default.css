@@ -1,0 +1,37 @@
+body{
+	width: 100%;
+	margin: 0;
+}
+/*#leftBar,
+#mainContent{
+	-ms-transform: translateX(30%); 
+    -webkit-transform: translateX(30%); 
+    transform: translateX(30%);
+}*/
+#leftBar{
+	position: fixed;
+	background: red;
+	width: 100%;
+	display: block;
+	height: 100%;
+	
+    /*left: -100%;*/
+}
+#leftBar.open{
+    -webkit-animation-name: abrirMenuL;
+    animation-name: abrirMenuL;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    /*left: -70%;*/
+}
+
+@-webkit-keyframes abrirMenuL {
+    from {
+	  -webkit-transform: translateX(-100%);
+	}
+    to {
+	  -webkit-transform: translateX(-70%);
+	}
+}
+
+
