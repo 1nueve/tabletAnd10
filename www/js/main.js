@@ -8,7 +8,9 @@ var menuActivo = false;
 var screenActivo = true;
 function loadMenu(hash, display) {
     /** Variables de configuracion **/
-    var url = "http://198.1.89.58/~appel10/el10/p.php?categoria="; //produccion
+    //var url = "http://198.1.89.58/~appel10/el10/p.php?categoria="; //produccion
+    var url = "http://eldiez.apps.godisruptive.com/p.php?categoria="; //produccion
+
     var SIN_IMAGEN = new Array('cafeteria', 'bebidas');
     var pagina = url + hash;
     //Actualizando titulo de la pagina segun la categoria consultada
@@ -626,7 +628,7 @@ $(window).load(function(){
         }
         var datos = $('#quejaycomen').serializeArray();
         if (valido == true ) {    
-            $.getJSON('http://godisruptive.com/eldiez/save.php',datos,function(res){
+            $.getJSON('http://eldiez.apps.godisruptive.com/send.php',datos,function(res){
                 if (res.guardado == true) {
                     $(".contacto .content").fadeOut(300, function () {
                         $(".contacto .content").empty();
